@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>LRainbow</title>
+</head>
+<body >
+
+    <header id="ihead" class="headstyle">
+<!--        头部背景图-->
+<!--        <div class="navbg" :style="navbgurl"></div>-->
+
+        <transition name="headbackground" enter-active-class="animated slideInRight" leave-active-class="animated slideOutLeft">
+            <img :src="picsource" :key="whichpic" alt="">
+        </transition>
+
+
+
+<!--        顶部导航条部分-->
+        <nav class="inav">
+<!--            导航条logo-->
+            <div class="navlogo">
+                <a href="#">
+                    <img src="assets/img/rainbowlogo.png" alt="littlerainbow">
+                </a>
+            </div>
+            <div class="navtoggle" @click="togglenavcontent"><i class="fa fa-angle-down fa-2x"></i></div>
+            <div :class="navcontentclass" ref="refnavcontent" :style="navcontenthstyle">
+                <ul class="navitemcontainer">
+                    <li><a href="#">注册</a></li>
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">反馈</a></li>
+                    <li><a href="#">加入我们</a></li>
+                </ul>
+            </div>
+        </nav>
+<!--        头部底边轮播图指示条-->
+        <div class="container-fluid position-absolute " style="height: 30px;bottom:22px;">
+            <div class="row justify-content-center">
+                <div class="col-md-2 align-items-center d-flex justify-content-around">
+                    <div class="hbitem d-inline-block " :style="indicatorstrip1"></div>
+                    <div class="hbitem d-inline-block " :style="indicatorstrip2"></div>
+                    <div class="hbitem d-inline-block " :style="indicatorstrip3"></div>
+                </div>
+            </div>
+        </div>
+        <article :style="headarticle" class="centerContent bigarti d-md-block d-sm-none">
+            <h4 style="margin-bottom: 0;">Because the people who are <span style="font-size: 2rem">crazy</span> enough</h4>
+            <br/>
+            <h4 style="padding-left: 2rem">To <span style="font-size: 2rem">think</span> they can change the world,
+                <span style="font-size: 2rem">are</span> the ones who do.
+            </h4>
+        </article>
+    </header>
+
+<!--    内容板块区域-->
+    <main id="imain">
+        <div class="centerContent ">
+
+<!--            前端卡片-->
+            <div class="webDevelop form-inline">
+                <div class="webDevelopHead">
+                    <div class="webDevelopTitle">
+                        <h3>前端开发</h3>
+                        <p>文档、案例、练习、源码解析</p>
+                    </div>
+                    <div class="webDevelopTags">
+                        <span class="badge badge-pill badge-success">CSS3</span>
+                        <span class="badge badge-pill badge-warning">HTML</span>
+                        <span class="badge badge-pill badge-primary">Javascript</span>
+                        <span class="badge badge-pill badge-danger">JQuery</span>
+                        <span class="badge badge-pill badge-dark">Ajax</span>
+                    </div>
+                </div>
+                <singlecard v-for="item in cardlists" v-bind:cardpropsobj="item" :cardstotal="totalnums" :key="item.id"></singlecard>
+            </div>
+<!--            服务端卡片-->
+            <div class="form-inline">
+                <div class="webDevelopHead">
+                    <div class="webDevelopTitle">
+                        <h3>服务端开发</h3>
+                        <p>三大框架整合案例、javaweb源码及重要api解析。node服务端开发。</p>
+                    </div>
+                    <div class="webDevelopTags">
+                        <span class="badge badge-pill badge-info">JavaWeb</span>
+                        <span class="badge badge-pill badge-success">Spring</span>
+                        <span class="badge badge-pill badge-primary">Mybatis</span>
+                        <span class="badge badge-pill badge-secondary">Spring MVC</span>
+                        <span class="badge badge-pill badge-light">Nodejs</span>
+                        <span class="badge badge-pill badge-dark">Servlet</span>
+                        <span class="badge badge-pill badge-danger">JSP</span>
+                    </div>
+                </div>
+                <singlecard v-for="item in servercardlists" v-bind:cardpropsobj="item" :cardstotal="servertotalnums" :key="item.id"></singlecard>
+            </div>
+
+        </div>
+    </main>
+
+<!--    页脚-->
+    <footer class="footer">
+        <div style="width: 93%;height: 1px;margin: 31px auto; background-color: #cccccc"></div>
+        <div class="centerContent">
+            <div class="row  justify-content-sm-start justify-content-md-around justify-content-lg-around">
+                <div class="col-md-4 col-lg-4 col-sm-5">
+                    <div style="margin-left: 15%">
+                        <dl id="techstack">
+                            <dt>Technology Stack</dt>
+                            <dd>Html/Html5</dd>
+                            <dd>Css/Css3</dd>
+                            <dd>Javascript</dd>
+                            <dd>Jquery</dd>
+                            <dd>Vue.js</dd>
+                            <dd>Webpack</dd>
+                            <dd>Bootstrap</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-5">
+                    <div style="margin-left: 15%">
+                        <dl class="footerlist" id="excellentsites">
+                            <dt>精选站点</dt>
+                            <dd><a href="https://unsplash.com">Unsplash</a></dd>
+                            <dd><a href="https://www.beatsbydre.com/cn">BEATS BY DR.DRE</a></dd>
+                            <dd><a href="https://www.apple.com/cn/music/">Apple Music</a></dd>
+<!--                            <dd><a href=""></a></dd>-->
+<!--                            <dd><a href=""></a></dd>-->
+<!--                            <dd><a href=""></a></dd>-->
+                        </dl>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-sm-5">
+                    <div style="margin-left: 15%">
+                        <dl id="footerToBeDetermined">
+                            <dt>内容待定</dt>
+                            <dd>contents to be determined</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 93%;height: 1px;margin: 12px auto; background-color: #cccccc">
+            <div style="padding-top: 26px">
+                <address class="myaddr clearfix">
+                    <ul>
+                        <li>Contact me <i class="fa fa-heart" style="color: lightcoral;"></i></li>
+                        <li>
+                            <a href="mailto:jasoncareter@icloud.com">
+                                <i class="fa fa-envelope-o "></i>
+                                &nbsp;jasoncareter@icloud.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#qq" id="qq">
+                                <i class="fa fa-qq">
+                                    &nbsp;812068182
+                                </i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel: +86 15367823463">
+                                <i class="fa fa-phone"></i>
+                                &nbsp;+86 15367823463
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+<!--    <script src="commons.bundle.js"></script>-->
+<!--    <script src="index.bundle.js"></script>-->
+</body>
+</html>
+<script>
+    import Singlecard from "./vuecomp/singlecard";
+    export default {
+        components: {Singlecard}
+    }
+</script>

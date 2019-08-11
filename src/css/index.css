@@ -1,0 +1,292 @@
+
+html,body {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.centerContent{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*width: 1080px;*/
+    width: 95%;
+    padding: 0 24px;
+    margin: 0 auto;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.myaddr li {
+    list-style: none;
+}
+.myaddr ul {
+    float: right;
+}
+.myaddr a:hover{
+    text-decoration: none;
+}
+.myaddr li:nth-child(2){
+    padding-left: 1.5rem;
+}
+.myaddr li:nth-child(3){
+    padding-left: 1.5rem;
+}
+.myaddr li:nth-child(4){
+    padding-left: 1.5rem;
+}
+
+.webDevelopHead{
+    width: 100%;
+    margin-top: 35px;
+    margin-left: 1%;
+    margin-bottom: 20px;
+}
+.webDevelopTitle h3{
+    color: #333333;
+}
+.webDevelopTitle p{
+    color: #666666;
+}
+.webDevelopTags{
+    padding-top: 3px;
+
+}
+.webDevelopTags span{
+    margin: 0 3px;
+    -webkit-box-shadow: 1px 2px 2px  rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 2px 2px  rgba(0, 0, 0, 0.1);
+    box-shadow:  1px 2px 2px rgba(0, 0, 0, 0.1);
+}
+/*.headbackground-enter*/
+
+
+/*media screen-responsive-param xl1200;lg992;md768;sm576;*/
+
+@media screen and (min-width: 768px) {
+    /*屏幕宽度大于1200像素的时候采用的CSS样式*/
+    .headstyle{
+        height: 529px;
+        width: 100%;
+        position: relative;
+        /*background: url("../assets/img/island1920980.jpg") no-repeat center center;*/
+        /*-webkit-background-size: cover;*/
+        /*background-size: cover;*/
+    }
+    .headstyle img{
+        height: 529px;
+        position: absolute;
+        top: 0;
+        width:100%;
+        object-fit: cover;
+        z-index: -666;
+    }
+    .navbg{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -3;
+    }
+    .inav{
+        height: 68px;
+        width: 100%;
+        /*background-color: rgba(255,192,203,0.12);*/
+        position: relative;
+    }
+
+    /*首页logo样式*/
+
+    .navlogo{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        width: 68px;
+        height: 68px;
+        padding: 17px;
+    }
+    .navlogo a img{
+        width: 34px;
+        height: 34px;
+    }
+    .navtoggle{
+        display: none;
+    }
+    .navcontent{
+        float: right;
+        margin-right: 30px;
+        height: 100%;
+    }
+    .navitemcontainer {
+        margin: 0 6px;
+        display: inline-block;
+        height: 100%;
+        line-height: 68px;
+    }
+    .navitemcontainer li {
+        list-style: none;
+        padding: 0px 6px;
+        float: right;
+    }
+    .navitemcontainer li:hover{
+        border-bottom: 1px solid #ffffff;
+    }
+    .navitemcontainer li a {
+        color: rgba(255,255,255,0.87);
+    }
+
+    /*顶部轮播条*/
+
+    .hbitem{
+
+        width: 30%;
+        height: 4px;
+        background: rgba(255,255,255,0.3);
+    }
+    .row {
+        height: 100%;
+    }
+
+    .bigarti{
+        width: 80%;
+        margin: 50px 15% 0 5%;
+    }
+
+    /*最底部*/
+    .clearfix::before{
+        content: '';
+        display: block;
+        clear: both;
+        overflow: hidden;
+    }
+
+
+    #techstack dt {
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+        color: #666666;
+    }
+    #techstack dd {
+        margin-left: 1.25rem;
+        color: #999999;
+    }
+    #excellentsites dt{
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+        color: #666666;
+    }
+
+    #excellentsites dd a{
+        color : blueviolet;
+    }
+
+    #footerToBeDetermined dt{
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+        color: #666666;
+    }
+    #footerToBeDetermined dd {
+        margin-left: 1.25rem;
+        color: #999999;
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+    /*屏幕宽度小于768像素的时候采用的CSS样式*/
+    .headstyle{
+        height: 292px;
+        width: 100%;
+        position: relative;
+        /*background: url("../assets/img/island1920980.jpg") no-repeat center center;*/
+        /*-webkit-background-size: cover;*/
+        /*background-size: cover;*/
+    }
+    .headstyle img{
+        position: absolute;
+        top: 0;
+        height: 292px;
+        width:100%;
+        object-fit: scale-down;
+    }
+    .navbg {
+        height: 100%;
+        width: 100%;
+        background: url("../assets/img/island1920980.jpg") no-repeat center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        z-index: -3;
+    }
+    .inav{
+        height: 58px;
+        width: 100%;
+        /*background-color: rgba(255,192,203,0.12);*/
+        position: relative;
+    }
+    .navlogo{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        width: 58px;
+        height: 58px;
+        padding: 15px;
+    }
+    .navlogo a img{
+        width: 28px;
+        height: 28px;
+    }
+    .navtoggle{
+        float: right;
+        color: rgba(255,255,255,0.9);
+        margin-right: 15px;
+        height: 58px;
+        padding-top: 15px;
+        /*color: rgba(255,255,255,0.02);*/
+    }
+
+    .navcontent{
+        position: absolute;
+        top: 72px;
+        left: 15px;
+        overflow: hidden;
+        /*-webkit-animation: 0.5s ease-in-out;*/
+        /*-o-animation: 0.5s ease-in-out;*/
+        /*animation: 0.5s ease-in-out;*/
+    }
+    .navitemcontainer{
+        margin-bottom: 0;
+        padding-left: 8px;
+    }
+    .navitemcontainer li {
+        list-style: none;
+        /*margin-bottom: 6px;*/
+        width: 200px;
+        height: 20px;
+        padding-bottom: 7px;
+    }
+    .navitemcontainer li a {
+        color: rgba(255,255,255,0.87);
+        /*color: rgba(22,22,22,0.87);*/
+        /*height: 100%;*/
+    }
+    .navitemcontainer li a:hover{
+        text-decoration: none;
+    }
+
+
+}
+
+@media screen and (max-width:576px){
+    .footer{
+        display: none;
+    }
+}
+
